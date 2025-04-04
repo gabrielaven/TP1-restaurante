@@ -1,3 +1,4 @@
+package ar.urnn.concurso;
 class Visa implements TarjetaCredito {
     @Override
     public double aplicarDescuento(double totalBebidas, double totalComidas) {

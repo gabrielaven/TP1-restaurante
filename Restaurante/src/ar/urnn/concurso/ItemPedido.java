@@ -1,3 +1,4 @@
+package ar.urnn.concurso;
 
 class ItemPedido {
     private final String nombre;

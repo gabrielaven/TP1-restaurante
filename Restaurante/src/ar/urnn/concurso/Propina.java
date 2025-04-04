@@ -1,3 +1,4 @@
+package ar.urnn.concurso;
 public enum Propina {
     BAJO(0.02F),
     MEDIO(0.03F),
