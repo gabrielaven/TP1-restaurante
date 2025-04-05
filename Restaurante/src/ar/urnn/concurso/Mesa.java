@@ -28,9 +28,10 @@ public class Mesa {
         double totalBebidas = bebidas.stream().mapToDouble(Bebida::calcularSubtotal).sum();
         double totalComidas = comidas.stream().mapToDouble(Comida::calcularSubtotal).sum();
         double totalConDescuento = tarjeta.aplicarDescuento(totalBebidas, totalComidas);
-        registro.registrarVenta(totalConDescuento);
-        return totalConDescuento + (totalConDescuento * propina.porcentaje());
+        double totalFinal = totalConDescuento + (totalConDescuento * propina.porcentaje());
+        
+        registro.registrarVenta(totalFinal);
+        return totalFinal;
     }
-    
 }
 

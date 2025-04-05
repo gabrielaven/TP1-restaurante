@@ -2,7 +2,8 @@ package ar.urnn.concurso;
 
 public class Main {
     public static void main(String[] args) {
-        RegistroVenta registroArchivo = new RegistrarVentasArchivo();
+    	ProveedorDeFecha proveedorReal = new ProveedorDeFechaActual();
+        RegistroVenta registroArchivo = new RegistrarVentasArchivo(proveedorReal);
         Mesa mesaArchivo = new Mesa(1, registroArchivo);
         mesaArchivo.agregarBebida("Coca Cola", 3000.0, 2);
         mesaArchivo.agregarComida("Milanesa", 10000.0, 1);
